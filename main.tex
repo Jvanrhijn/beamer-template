@@ -1,0 +1,105 @@
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\documentclass{beamer}
+
+\def\code#1{\texttt{#1}}
+\newcommand{\pder}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\der}[3][]{\frac{\mathrm{d}^{#1} #2}{\mathrm{d} #3^{#1}}}
+\newcommand{\rec}[1]{\frac{1}{#1}}
+\newcommand{\half}[]{\frac{1}{2}}
+
+% There are many different themes available for Beamer. A comprehensive
+% list with examples is given here:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% You can uncomment the themes below if you would like to use a different
+\usetheme{Frankfurt}
+
+\usepackage{algorithmic}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{units}
+
+\title{Presentation title}
+
+\author{Author 1 \and Author 2}
+
+\date{\today}
+
+% Let's get started
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{A section}
+
+\begin{frame}{Some frame title}
+
+\begin{columns}
+
+    \begin{column}{.5\textwidth}
+        \visible<1->{These items} \\ \vspace{1em}
+        \visible<2->{Appear} \\ \vspace{1em}
+        \visible<3->{one by one}\\\vspace{1em}
+    \end{column}
+    
+    \begin{column}{.5\textwidth}
+        \includegraphics<1->[width=\textwidth]{example-image-a}
+    \end{column}
+    
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Frame with side by side images and text}
+
+    \begin{columns}
+        \begin{column}{.5\textwidth}
+            \includegraphics[width=\textwidth]{example-image-a} 
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \includegraphics[width=\textwidth]{example-image-a} 
+        \end{column}
+    \end{columns}
+    
+    \vspace{1em}
+    Some explanation
+
+\end{frame}
+
+\section{Some title}
+
+\begin{frame}{Frame title}
+
+\begin{columns}
+    \begin{column}{.5\textwidth}
+        \begin{itemize}
+            \item<1-> First item
+            \item<2-> Second item
+            \item<3-> etc
+        \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \raggedleft{\includegraphics<1->[width=\textwidth]{example-image-a}}
+    \end{column}
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Questions}
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/questionmark.png}
+\end{frame}
+
+\end{document}
